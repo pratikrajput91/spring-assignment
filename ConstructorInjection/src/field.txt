@@ -1,0 +1,19 @@
+package com.capgemini.spring.fieldInjection;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class FieldDemo {
+ private String hw = "Hello World";
+ 
+public Inspiration(
+ @Value("For all my running, I can understand") String lyric) {
+ this.lyric = lyric;
+ }
+ public String getLyric() {
+ return lyric;
+ }
+ public void setLyric(String lyric) {
+ this.lyric = lyric;
+ }
+}
